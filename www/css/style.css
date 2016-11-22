@@ -1,0 +1,34 @@
+body {
+    background-color: #eeeeee;
+}
+
+.digit {
+    width: 22.1%;
+    height: 474px;
+    float: left;
+}
+
+.colon {
+    width: 10%;
+    float: left;
+    height: 300px;
+    margin: 80px 0;
+    background-image: url('../assets/colon1.png');
+    background-repeat: no-repeat;
+}
+
+.alert {
+    box-sizing: border-box;
+    padding: 32px;
+    background-color: #88EB95;
+    width: 100%;
+}
+
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
