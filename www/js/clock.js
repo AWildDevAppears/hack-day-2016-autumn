@@ -15,7 +15,6 @@ var HUNode = document.getElementById('hour-unit');
 var MTNode = document.getElementById('min-ten');
 var MUNode = document.getElementById('min-unit');
 var dateNode = document.getElementById('date');
-var jokeNode = document.getElementById('joke');
 var timeNode = document.getElementById('form-time');
 var timeSubmit = document.getElementById('submit-time');
 
@@ -79,10 +78,6 @@ function updateUi(ht, hu, mt, mu, dateString) {
         HUNode.setAttribute('src', 'assets/hours-units-' + hu + '.webm');
         HUNode.volume = 0;
         HUNode.play();
-
-        httpRequest.onreadystatechange = printJoke;
-        httpRequest.open('GET', 'https://api.icndb.com/jokes/random', true);
-        httpRequest.send(null);
     }
 
     if (mt != minTens) {
@@ -98,17 +93,7 @@ function updateUi(ht, hu, mt, mu, dateString) {
         MUNode.volume = 0;
         MUNode.play();
     }
-
-    dateNode.innerHTML = dateString;
 }
-
-function printJoke() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        var res = JSON.parse(httpRequest.responseText);
-        jokeNode.innerHTML = '"Joke" ' + res.value.id + ': ' + res.value.joke;
-    }
-}
-
 
 timeSubmit.addEventListener('click', function (e) {
     var time = timeNode.value;

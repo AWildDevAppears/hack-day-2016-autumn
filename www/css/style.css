@@ -1,20 +1,35 @@
 body {
+    margin: 0;
+    background-color: #000;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+ 
+}
+
+.box {
     background-color: #eeeeee;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    background-image: url('../assets/colon1.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.colon {
+   margin-left: 11%;
 }
 
 .digit {
     width: 22.1%;
-    height: 474px;
+    padding-left: 30px;
+    box-sizing: border-box;
     float: left;
-}
-
-.colon {
-    width: 10%;
-    float: left;
-    height: 300px;
-    margin: 80px 0;
-    background-image: url('../assets/colon1.png');
-    background-repeat: no-repeat;
 }
 
 .alert {
